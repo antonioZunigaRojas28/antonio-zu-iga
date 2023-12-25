@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&family=M+PLUS+Rounded+1c:wght@500;800&family=Open+Sans:ital,wght@0,300;0,700;0,800;1,300;1,500&family=Roboto:wght@100;700&family=Teko:wght@300;700&display=swap');
+
+:root{
+    /* --colorFondo: #2a3c46;
+    --colorTitulos: #1CB698;
+    --colortexto: #fff; */
+    --colorFondo: #2a3c46;
+    --colorTitulos: #db5406;
+    --colortexto: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+
+.container-header{
+    background: var(--colorFondo);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.container-header header{
+    max-width: 1200px;
+    padding: 15px 20px;
+    margin: auto;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-header header .logo a{
+    text-decoration: none;
+    font-size: 30px;
+    color: var(--colorTitulos);
+    font-weight:700;
+}
+.container-header header ul{
+    list-style: none;
+    display: flex;
+    
+}
+.container-header header nav ul li a{
+    color: var(--colortexto);
+    text-decoration: none;
+    margin-inline: 20px;
+    padding: 5px;
+    text-align: none;
+}
+.container-header header nav ul li a:hover{
+    color: var(--colorTitulos);
+    font-weight: bold;
+    text-decoration: underline double;
+}
+
+.container-header header nav ul li .menu-activo{
+    color: var(--colorTitulos);
+    font-weight: bold;
+    text-decoration: underline double;
+}
+
+
+.container-header .nav-oculto{
+    background-color: var(--colorTitulos);
+    color:var(--colortexto);
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+/* MAIN - INICIO */
+
+.main{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url("../img/script.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: var(--colortexto);
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+.main .container-principal{
+    background-color: var(--colorFondo);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    padding: 20px;
+    border: 10px double black;
+    
+}
+.main .container-principal img{
+    margin-top: 40px;
+    border: 5px double var(--colorTitulos);
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.main .container-principal h1{
+    margin-top: 40px;
+    font-size: 25px;
+}
+.main .container-principal h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.main .container-principal .redesSociales a{
+    color: var(--colortexto);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid var(--colortexto);
+    border-radius: 20%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-inline: 5px;
+    margin-block: 40px;
+    font-size: 20px;
+}
+.main .container-principal .redesSociales a:hover{
+    background-color: var(--colorTitulos);
+}
+
+/* MAIN - SOBRE MI */
+.main .main-sobre-mi{
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+.main .main-sobre-mi h2{
+    margin-top: 60px;
+    font-size: 25px;
+    text-align: center;
+    padding-block: 20px;
+}
+.main .main-sobre-mi p{
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.main .main-sobre-mi p span{
+    font-weight: bold;
+    color: var(--colorTitulos);
+}
+.main .main-sobre-mi .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "datosGenerales temasDeInteres";
+}
+.main .main-sobre-mi .row .datosGenerales{
+    grid-area: datosGenerales;
+}
+.main .main-sobre-mi .row .temasDeInteres{
+    grid-area: temasDeInteres;
+}
+.main .main-sobre-mi .row .column{
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.main .main-sobre-mi .row .column ul{
+    list-style: none;
+}
+.main .main-sobre-mi .row .column ul li{
+    margin: 12px 0;
+}
+.main .main-sobre-mi .row .column ul li strong{
+    color: var(--colorTitulos);
+    width: 130px;
+    display: inline-block;
+}
+.main .main-sobre-mi .row .column ul li span{
+    background-color: var(--colorTitulos);
+    color: black;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.main .main-sobre-mi .row .column .intereses{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.main .main-sobre-mi .row .column .intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main .main-sobre-mi .row .column .intereses .interes:hover{
+    background-color: var(--colorTitulos);
+}
+.main .main-sobre-mi .row .column .intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.main .main-sobre-mi button{
+    cursor: pointer;
+    background-color: var(--colorTitulos);
+    border: 2px solid var(--colortexto);
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: black;
+    position: relative;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* MAIN - HABILIDADES */
+.main .habilidades{
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+.main .habilidades h2{
+    text-align: center;
+    font-weight: bold;
+}
+.main .habilidades .conteiner-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* MAIN - CURRICULUM */
+.main .curriculum{
+    margin: auto;
+    color: var(--colortexto);
+    padding: 20px 20px;
+    max-width: 1200px;
+}
+.main .curriculum .contenido h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
+.main .curriculum .row{
+    display: flex;
+    justify-content: space-between;
+}
+.main .curriculum .row .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.main .curriculum .row .col h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.main .curriculum .row .izq{
+    border-right: 2px solid var(--colorTitulos);
+}
+.main .curriculum .row .der{
+    border-left: 2px solid var(--colorTitulos);
+}
+.main .curriculum .row .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: var(--colorFondo);
+    position: relative;
+}
+.main .curriculum .row .item h4{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.main .curriculum .row .item .casa{
+    color: var(--colorTitulos);
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+}
+.main .curriculum .row .item .fecha{
+    display: block;
+    color: var(--colorTitulos);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* MAIN - CONTACTO */
+.main .contacto {
+    margin: auto;
+    
+    padding: 10px;
+    background-color: var(--colorFondo);
+    border-radius: 20px;
+}
+.main .contacto .contenido h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
+.main .contacto .contenido .col{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+.main .contacto .contenido input, 
+.main .contacto .contenido textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: var(--colortexto);
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+}
+.main .contacto .contenido input:focus, 
+.main .contacto .contenido textarea:focus{
+    background-color: rgb(247, 236, 143);
+}
+.main .contacto .contenido .col button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.main .contacto .contenido .col button:hover{
+    background-color: var(--colorTitulos);
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--colorFondo);
+    color: var(--colortexto);
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redesSociales{
+    margin-bottom: 20px;
+}
+footer .redesSociales a{
+    color: var(--colortexto);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid var(--colortexto);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .redesSociales a:hover{
+    background-color: var(--colorTitulos);
+}
+
+/* MEDIA QUERY - HEADER, FOOTER*/
+@media screen and (max-width:980px) {
+    .container-header header .nav{
+        display: none;
+    }
+    .container-header header .nav-oculto{
+        display: block;
+    }
+    .container-header nav.oculto{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        background-color: black;
+        width: 200px;
+    }
+    .container-header nav.oculto ul{
+        display: block !important;
+    }
+    .container-header nav.oculto ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){   
+    /* SOBRE MI */
+    .main .main-sobre-mi h2 {
+        margin-top: 10px;
+    }
+
+    .main .main-sobre-mi p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .main .main-sobre-mi .row{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "datosGenerales"
+                                "temasDeInteres";
+    }
+    .main .main-sobre-mi .row .column ul li{
+        margin: 5px 0;
+    }
+    .main .main-sobre-mi .row .column .intereses .interes i{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .main .main-sobre-mi .row .column .intereses .interes span{
+        font-size: 10px;
+    }
+    .main .main-sobre-mi .row .column .intereses .interes{
+        width: 50px;
+        height: 50px;
+    }
+    .main .main-sobre-mi button{
+        margin: 0 auto;
+    }
+    .temasDeInteres{
+        margin-bottom: 100px;
+    }
+
+    /* CURRICULUM */
+    .main .curriculum .contenido .row{
+        display: block;
+    }
+    .main .curriculum .contenido .col{
+        width: 100%;
+    }
+    .main .curriculum .contenido .col .item p{
+        display: none;
+    }
+    .main .curriculum .row .item {
+        padding: 10px 25px;
+        margin-bottom: 10px;
+        background-color: var(--colorFondo);
+        position: relative;
+    }
+    .main .curriculum .row .item h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .main .curriculum .row .col h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .main .curriculum .contenido h2 {
+        font-size: 30px;
+        text-align: center;
+        padding: 20px 0 5px 0;
+    }
+
+
+}
