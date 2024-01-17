@@ -1,0 +1,91 @@
+
+/* HEADER */
+.container-header{
+    background: $colorFondo;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    header{
+        max-width: 1200px;
+        padding: 15px 20px;
+        margin: auto;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            a{
+                text-decoration: none;
+                font-size: 30px;
+                color: $colorTitulos;
+                font-weight:700;
+        }
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            
+        }
+        nav {
+            ul {
+                li {
+                    a{
+                        color: $colortexto;
+                        text-decoration: none;
+                        margin-inline: 20px;
+                        padding: 5px;
+                        text-align: none;
+                        &:hover{
+                            color: $colorTitulos;
+                            font-weight: bold;
+                            text-decoration: underline double;
+                        }
+                    }
+                    .menu-activo{
+                        color: $colorTitulos;
+                        font-weight: bold;
+                        text-decoration: underline double;
+                    }
+                }
+            }
+            @media(max-width:980px){
+                display: none;
+            }
+        }
+    }
+    .nav-oculto{
+        background-color: $colorTitulos;
+        color:$colortexto;
+        padding: 5px 10px;
+        border-radius: 50px;
+        cursor: pointer;
+        display: none;
+        @media(max-width:980px){
+            display: block;
+        }
+    }
+    nav.oculto{
+        @media(max-width:980px){
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 80px;
+            background-color: black;
+            width: 200px;
+        }
+        ul{
+            @media(max-width:980px){
+                display: block !important;
+            }
+            li{
+                @media(max-width:980px){
+                    border-bottom: 1px solid #fff;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
