@@ -4,11 +4,11 @@
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
     url("../img/script.jpg");
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     color: $colortexto;
     display: flex;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 70px;
 
     /* INICIO */
     .container-principal{
@@ -101,11 +101,17 @@
             grid-template-areas: "datosGenerales temasDeInteres";
             .datosGenerales{
                 grid-area: datosGenerales;
+                h3{
+                    margin-bottom: 20px;
+                }                
             }
             .temasDeInteres{
                 grid-area: temasDeInteres;
                 @media (max-width:700px) {
                     margin-bottom: 100px;
+                }
+                h3{
+                    margin-bottom: 20px;
                 }
             }
             .column{
@@ -241,7 +247,7 @@
 
     /* CONTACTO */
     .contacto {
-        margin: auto;
+        margin: 10px auto;
         padding: 10px;
         background-color: $colorFondo;
         border-radius: 20px;
@@ -251,63 +257,89 @@
                 text-align: center;
                 padding: 20px 0;
             }
-            .col{
-                width: 100%;
-                padding: 10px;
-                position: relative;
-                button{
-                    cursor: pointer;
-                    background-color: transparent;
-                    border: 2px solid white;
+            .fila{
+                display: flex;
+                .col{
                     width: 100%;
-                    display: block;
-                    margin: 20px auto;
-                    padding: 10px 22px;
-                    font-size: 11px;
-                    color: #fff;
+                    padding: 10px;
                     position: relative;
-                    z-index: 10;
-                    font-weight: bold;
 
-                    animation-name: botonEnviarMensaje;
-                    animation-duration: 1s;
-                    animation-delay: 0s;
-                    animation-timing-function: ease-in-out;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-                    
-                    @keyframes botonEnviarMensaje {
-                        from{
-                            width: 60%;
-                            background-color: $colorFondo;
+                    .datos{
+                        background-image: url(../img/ubicacion.png);
+                        min-height: 100%;
+                        padding: 20px;
+                        border: 5px double black;
+                        ul{
+                            margin-top: 20px;
+                            list-style: none;
+                            text-align: center;
+                            li{
+                                margin-bottom: 20px;
+                                background-color: black;
+                                padding: 10px;
+                                border-radius: 10px;
+                                font-size: 13px;
+                                font-weight: bold;
+                            }
                         }
-                        to{
-                            width: 100%;
-                            background-color: $colorTitulos;
-                        }
-                        
                     }
-                    /*
-                    &:hover{
-                        background-color: $colorTitulos;
+                    button{
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: 2px solid white;
+                        width: 100%;
+                        display: block;
+                        margin: 20px auto;
+                        padding: 10px 22px;
+                        font-size: 11px;
+                        color: #fff;
+                        position: relative;
+                        z-index: 10;
                         font-weight: bold;
+    
+                        animation-name: botonEnviarMensaje;
+                        animation-duration: 1s;
+                        animation-delay: 0s;
+                        animation-timing-function: ease-in-out;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                        
+                        @keyframes botonEnviarMensaje {
+                            from{
+                                width: 60%;
+                                background-color: $colorFondo;
+                            }
+                            to{
+                                width: 100%;
+                                background-color: $colorTitulos;
+                            }
+                            
+                        }
+                        /*
+                        &:hover{
+                            background-color: $colorTitulos;
+                            font-weight: bold;
+                        }
+                        */
                     }
-                    */
+                    input, 
+                    textarea{
+                        display: block;
+                        width: 100%;
+                        padding: 10px;
+                        border: none;
+                        margin-bottom: 20px;
+                        background-color: $colortexto;
+                        color: black;
+                        font-weight: 700;
+                        font-size: 15px;
+                        &:focus{
+                            background-color: rgb(247, 236, 143);
+                        }
+                    }
                 }
-            }
-            input, 
-            textarea{
-                display: block;
-                width: 100%;
-                padding: 10px;
-                border: none;
-                margin-bottom: 20px;
-                background-color: $colortexto;
-                color: black;
-                font-weight: 700;
-                font-size: 15px;
-                &:focus{
-                    background-color: rgb(247, 236, 143);
+                @media (max-width:700px){
+                    display: block;
                 }
             }
         }

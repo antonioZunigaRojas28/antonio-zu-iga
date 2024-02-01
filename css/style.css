@@ -101,11 +101,11 @@ $colortexto: #fff;
 .main {
   background: linear-gradient(to top, rgba(30, 35, 38, 0.8), rgb(30, 35, 38)), url("../img/script.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
   display: flex;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 70px;
   /* INICIO */
   /* SOBRE MI */
   /* HABILIDADES */
@@ -198,6 +198,9 @@ $colortexto: #fff;
 .main .main-sobre-mi .row .datosGenerales {
   grid-area: datosGenerales;
 }
+.main .main-sobre-mi .row .datosGenerales h3 {
+  margin-bottom: 20px;
+}
 .main .main-sobre-mi .row .temasDeInteres {
   grid-area: temasDeInteres;
 }
@@ -205,6 +208,9 @@ $colortexto: #fff;
   .main .main-sobre-mi .row .temasDeInteres {
     margin-bottom: 100px;
   }
+}
+.main .main-sobre-mi .row .temasDeInteres h3 {
+  margin-bottom: 20px;
 }
 .main .main-sobre-mi .row .column {
   font-size: 15px;
@@ -343,7 +349,7 @@ $colortexto: #fff;
   gap: 10px;
 }
 .main .contacto {
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;
   background-color: #05496b;
   border-radius: 20px;
@@ -353,12 +359,34 @@ $colortexto: #fff;
   text-align: center;
   padding: 20px 0;
 }
-.main .contacto .contenido .col {
+.main .contacto .contenido .fila {
+  display: flex;
+}
+.main .contacto .contenido .fila .col {
   width: 100%;
   padding: 10px;
   position: relative;
 }
-.main .contacto .contenido .col button {
+.main .contacto .contenido .fila .col .datos {
+  background-image: url(../img/ubicacion.png);
+  min-height: 100%;
+  padding: 20px;
+  border: 5px double black;
+}
+.main .contacto .contenido .fila .col .datos ul {
+  margin-top: 20px;
+  list-style: none;
+  text-align: center;
+}
+.main .contacto .contenido .fila .col .datos ul li {
+  margin-bottom: 20px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.main .contacto .contenido .fila .col button {
   cursor: pointer;
   background-color: transparent;
   border: 2px solid white;
@@ -394,8 +422,8 @@ $colortexto: #fff;
     background-color: #1CB698;
   }
 }
-.main .contacto .contenido input,
-.main .contacto .contenido textarea {
+.main .contacto .contenido .fila .col input,
+.main .contacto .contenido .fila .col textarea {
   display: block;
   width: 100%;
   padding: 10px;
@@ -406,9 +434,14 @@ $colortexto: #fff;
   font-weight: 700;
   font-size: 15px;
 }
-.main .contacto .contenido input:focus,
-.main .contacto .contenido textarea:focus {
+.main .contacto .contenido .fila .col input:focus,
+.main .contacto .contenido .fila .col textarea:focus {
   background-color: rgb(247, 236, 143);
+}
+@media (max-width: 700px) {
+  .main .contacto .contenido .fila {
+    display: block;
+  }
 }
 .main .curriculum {
   margin: auto;
